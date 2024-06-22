@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://12v72ab7c314" path="res://assets/art/evilwater.png" id="1_80k4j"]
 
 [node name="evil_water" type="Sprite2D"]
-scale = Vector2(0.303899, 0.303899)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_80k4j")
 script = ExtResource("1_8falg")
 

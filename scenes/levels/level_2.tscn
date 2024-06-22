@@ -52,4 +52,4 @@ scale = Vector2(0.0707212, 0.0707212)
 
 [node name="hydrogenBottle" parent="." instance=ExtResource("6_x0dxm")]
 position = Vector2(-543, -349)
-scale = Vector2(0.0764745, 0.0764745)
+scale = Vector2(0.076, 0.076)
