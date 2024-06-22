@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://vvvewgaanhnq" path="res://scenes/level_basics.tscn" id="1_3tb64"]
 [ext_resource type="PackedScene" uid="uid://dgyuoupsgu1ut" path="res://scenes/player.tscn" id="1_cuy7i"]
-[ext_resource type="PackedScene" uid="uid://dutjmmi4jqeta" path="res://scenes/sticky_note.tscn" id="3_m0qaf"]
+[ext_resource type="PackedScene" uid="uid://dutjmmi4jqeta" path="res://scenes/objects/sticky_note.tscn" id="3_m0qaf"]
 [ext_resource type="FontFile" uid="uid://ch2dudecawva1" path="res://assets/Font/ChakraPetch-Medium.ttf" id="3_yjet1"]
-[ext_resource type="PackedScene" uid="uid://ct3sls5trfbsq" path="res://scenes/keypad.tscn" id="5_8frci"]
+[ext_resource type="PackedScene" uid="uid://ct3sls5trfbsq" path="res://scenes/objects/keypad.tscn" id="5_8frci"]
 [ext_resource type="Texture2D" uid="uid://bl4rqkdfmn1ty" path="res://assets/art/book2.png" id="6_ago4m"]
 [ext_resource type="Texture2D" uid="uid://xwj6l5los2v7" path="res://assets/art/book4.png" id="7_ybdwc"]
 [ext_resource type="Texture2D" uid="uid://cqgnpckfsgf3y" path="res://assets/art/book1.png" id="8_jjmob"]

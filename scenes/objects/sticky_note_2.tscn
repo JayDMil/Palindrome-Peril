@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://dv1mj2enuffte"]
+
+[ext_resource type="Script" path="res://scripts/Interactable.gd" id="1_ygvf2"]
+[ext_resource type="Texture2D" uid="uid://camew5ngn03ts" path="res://assets/art/GJ_placeholder_postit_button_01.png" id="2_u7u2x"]
+[ext_resource type="Texture2D" uid="uid://d2ubvohv34c78" path="res://assets/art/GJ_placeholder_postit_01.png" id="3_hin6p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ynx6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j1yxy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t17me"]
+
+[node name="sticky_note_2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ygvf2")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7ynx6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_j1yxy")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t17me")
+icon = ExtResource("2_u7u2x")
+icon_alignment = 1
+
+[node name="popup_panel" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -148.346
+offset_top = 100.267
+offset_right = -108.346
+offset_bottom = 140.267
+
+[node name="Sprite2D" type="Sprite2D" parent="popup_panel"]
+z_index = 20
+position = Vector2(-31.6539, -35.2673)
+scale = Vector2(0.386023, 0.38334)
+texture = ExtResource("3_hin6p")

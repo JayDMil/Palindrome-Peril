@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp7v7qwsgr8rk"]
+
+[ext_resource type="Script" path="res://scripts/dragdrop.gd" id="1_xka4l"]
+[ext_resource type="Texture2D" uid="uid://biw0ai54ppeay" path="res://assets/art/oxygen.png" id="2_0oquw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_342eg"]
+size = Vector2(775.911, 722.24)
+
+[node name="oxygen_bottle" type="Sprite2D" groups=["evil_water_components"]]
+scale = Vector2(0.276325, 0.276325)
+texture = ExtResource("2_0oquw")
+script = ExtResource("1_xka4l")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.063
+anchor_right = 0.744
+anchor_bottom = 0.957
+offset_left = -849.0
+offset_top = -616.6
+offset_right = -809.4
+offset_bottom = -564.4
+scale = Vector2(1.02783, 0.954355)
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="." groups=["evil_water_components"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-21, -1.29475)
+scale = Vector2(1.10322, 1.48232)
+shape = SubResource("RectangleShape2D_342eg")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]

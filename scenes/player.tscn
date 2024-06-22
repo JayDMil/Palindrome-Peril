@@ -99,5 +99,4 @@ light_mask = 2
 visibility_layer = 2
 scale = Vector2(0.873042, 0.873042)
 sprite_frames = SubResource("SpriteFrames_nn0ck")
-animation = &"right"
-frame_progress = 0.00794875
+animation = &"idle"

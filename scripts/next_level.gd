@@ -14,6 +14,7 @@ func _on_body_entered(body):
 		var next_level_path = "res://scenes/levels/level_" + str(next_level_number) + ".tscn"
 		print(next_level_path)
 		get_tree().change_scene_to_file(next_level_path)
+		unlocked = false
 	else:
 		print("the door is locked.")
 
