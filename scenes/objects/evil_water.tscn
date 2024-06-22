@@ -9,9 +9,13 @@ texture = ExtResource("1_80k4j")
 script = ExtResource("1_8falg")
 
 [node name="Button" type="Button" parent="."]
-modulate = Color(1, 1, 1, 0)
+modulate = Color(0.843137, 0.843137, 0.843137, 0)
 offset_left = -480.0
 offset_top = -589.0
 offset_right = -470.0
 offset_bottom = -575.0
 scale = Vector2(82.274, 82.274)
+flat = true
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

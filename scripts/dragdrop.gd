@@ -2,7 +2,8 @@ extends Sprite2D
 
 var dragging = false
 var of = Vector2(0,0)
-const evil_water = preload("res://scenes/objects/evil_water.tscn")
+
+var evil_water = preload("res://scenes/objects/evil_water.tscn")
 
 func _process(delta):
 	if dragging:
@@ -26,9 +27,14 @@ func _on_area_2d_area_shape_entered(area_rid, area, area_shape_index, local_shap
 		create_evil_water()
 		#queue_free()
 
+func _ready():
+	print("ready")
+	var instance = evil_water.instantiate()
+	add_child(instance)
 
 func create_evil_water():
 	print("evil water made")
 	var instance = evil_water.instantiate()
 	add_child(instance)
-	
+
+
