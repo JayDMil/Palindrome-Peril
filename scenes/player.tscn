@@ -1,9 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://dgyuoupsgu1ut"]
+[gd_scene load_steps=8 format=3 uid="uid://dgyuoupsgu1ut"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_or4jq"]
 [ext_resource type="Texture2D" uid="uid://cilekm3j54pah" path="res://icon.svg" id="2_x5oye"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m700n"]
+atlas = ExtResource("2_x5oye")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sb6fs"]
+atlas = ExtResource("2_x5oye")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6o7e0"]
 atlas = ExtResource("2_x5oye")
 region = Rect2(0, 0, 128, 128)
 
@@ -16,18 +24,34 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sb6fs")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6o7e0")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwomb"]
 size = Vector2(122, 120)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_or4jq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.258824, 0.45098, 0.847059, 1)
 sprite_frames = SubResource("SpriteFrames_nn0ck")
-animation = &"idle"
-frame_progress = 0.457025
+animation = &"left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, -1)

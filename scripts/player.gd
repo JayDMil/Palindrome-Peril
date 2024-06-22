@@ -16,11 +16,9 @@ func _physics_process(delta):
 	#walk animations
 	if is_on_floor():
 		if direction > 0:
-			print("right")
-			#animated_sprite.play("left")
+			animated_sprite.play("right")
 		elif direction < 0:
-			print("left")
-			#animated_sprite.flip_h = true
+			animated_sprite.play("left")
 		else:
 			animated_sprite.play("idle")
 	
