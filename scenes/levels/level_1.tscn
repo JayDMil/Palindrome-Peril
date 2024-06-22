@@ -43,11 +43,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Keypad" parent="." instance=ExtResource("5_8frci")]
-offset_left = -299.0
-offset_top = -103.0
-offset_right = -299.0
-offset_bottom = -103.0
-scale = Vector2(0.971713, 0.971713)
+offset_left = -297.0
+offset_top = -115.0
+offset_right = -297.0
+offset_bottom = -115.0
+scale = Vector2(0.749643, 0.749643)
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(114, -172)

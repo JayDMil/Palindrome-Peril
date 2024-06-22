@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dc2qrsvddd5fy"]
+
+[ext_resource type="Script" path="res://scripts/water.gd" id="1_8falg"]
+[ext_resource type="Texture2D" uid="uid://12v72ab7c314" path="res://assets/art/evilwater.png" id="1_80k4j"]
+
+[node name="evil_water" type="Sprite2D"]
+scale = Vector2(0.303899, 0.303899)
+texture = ExtResource("1_80k4j")
+script = ExtResource("1_8falg")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -480.0
+offset_top = -589.0
+offset_right = -470.0
+offset_bottom = -575.0
+scale = Vector2(82.274, 82.274)

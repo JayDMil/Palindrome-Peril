@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dfe17ka3juin5"]
 
 [ext_resource type="Script" path="res://scripts/keypad_fakeout.gd" id="1_0vfni"]
-[ext_resource type="Texture2D" uid="uid://cilekm3j54pah" path="res://icon.svg" id="2_kc4ax"]
+[ext_resource type="Texture2D" uid="uid://bkvaiax7slyei" path="res://assets/art/GJ_placeholder_keypad_button_01.png" id="2_xjbfn"]
 [ext_resource type="Texture2D" uid="uid://cc7uqeshlww4r" path="res://assets/art/GJ_placeholder_keypad_01.png" id="3_iunl5"]
 [ext_resource type="FontFile" uid="uid://mshv4o72biio" path="res://assets/Font/ChakraPetch-MediumItalic.ttf" id="4_1vr01"]
 [ext_resource type="FontFile" uid="uid://y6ht53e6m174" path="res://assets/Font/ChakraPetch-SemiBoldItalic.ttf" id="5_foqmm"]
@@ -16,7 +16,8 @@ script = ExtResource("1_0vfni")
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
-icon = ExtResource("2_kc4ax")
+icon = ExtResource("2_xjbfn")
+flat = true
 
 [node name="popup_panel" type="Control" parent="."]
 visible = false

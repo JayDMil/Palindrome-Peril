@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dfe17ka3juin5" path="res://scenes/objects/keypad_fakeout.tscn" id="4_xubac"]
 [ext_resource type="PackedScene" uid="uid://dv1mj2enuffte" path="res://scenes/objects/sticky_note_2.tscn" id="5_yg6wa"]
 [ext_resource type="PackedScene" uid="uid://od6uyva3tdtv" path="res://scenes/objects/hydrogen_bottle.tscn" id="6_x0dxm"]
-[ext_resource type="Texture2D" uid="uid://biw0ai54ppeay" path="res://assets/art/oxygen.png" id="7_73rf7"]
+[ext_resource type="PackedScene" uid="uid://cp7v7qwsgr8rk" path="res://scenes/objects/oxygen_bottle.tscn" id="7_ntbyh"]
 
 [node name="level_2" type="Node2D"]
 
@@ -34,9 +34,10 @@ vertical_alignment = 1
 
 [node name="keypadFakeout" parent="." instance=ExtResource("4_xubac")]
 offset_left = -301.0
-offset_top = -103.0
+offset_top = -119.0
 offset_right = -301.0
-offset_bottom = -103.0
+offset_bottom = -119.0
+scale = Vector2(0.765731, 0.765731)
 
 [node name="sticky_note_2" parent="." instance=ExtResource("5_yg6wa")]
 offset_left = 487.0
@@ -45,11 +46,10 @@ offset_right = 487.0
 offset_bottom = -109.0
 scale = Vector2(0.761397, 0.761397)
 
-[node name="hydrogenBottle" parent="." instance=ExtResource("6_x0dxm")]
-position = Vector2(600, 63)
-scale = Vector2(0.0860658, 0.0860658)
+[node name="oxygen_bottle" parent="." instance=ExtResource("7_ntbyh")]
+position = Vector2(555, 69)
+scale = Vector2(0.0707212, 0.0707212)
 
-[node name="Oxygen" type="Sprite2D" parent="."]
-position = Vector2(535, 70)
-scale = Vector2(0.073486, 0.073486)
-texture = ExtResource("7_73rf7")
+[node name="hydrogenBottle" parent="." instance=ExtResource("6_x0dxm")]
+position = Vector2(-543, -349)
+scale = Vector2(0.0764745, 0.0764745)

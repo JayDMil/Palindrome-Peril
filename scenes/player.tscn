@@ -97,6 +97,7 @@ shape = SubResource("RectangleShape2D_fwomb")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 light_mask = 2
 visibility_layer = 2
+position = Vector2(28, -2)
 scale = Vector2(0.873042, 0.873042)
 sprite_frames = SubResource("SpriteFrames_nn0ck")
 animation = &"idle"
