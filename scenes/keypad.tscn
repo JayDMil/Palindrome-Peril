@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://ct3sls5trfbsq"]
+
+[ext_resource type="Texture2D" uid="uid://cilekm3j54pah" path="res://icon.svg" id="1_1o861"]
+[ext_resource type="Script" path="res://scripts/keypad.gd" id="1_umcx6"]
+[ext_resource type="Texture2D" uid="uid://cc7uqeshlww4r" path="res://assets/art/GJ_placeholder_keypad_01.png" id="4_s0jxo"]
+[ext_resource type="FontFile" uid="uid://mshv4o72biio" path="res://assets/Font/ChakraPetch-MediumItalic.ttf" id="5_axvmy"]
+[ext_resource type="FontFile" uid="uid://y6ht53e6m174" path="res://assets/Font/ChakraPetch-SemiBoldItalic.ttf" id="6_d0cgi"]
+[ext_resource type="FontFile" uid="uid://ch2dudecawva1" path="res://assets/Font/ChakraPetch-Medium.ttf" id="7_86mmp"]
+
+[node name="Keypad" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_umcx6")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+icon = ExtResource("1_1o861")
+
+[node name="popup_panel" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 82.0
+offset_top = 92.0
+offset_right = 122.0
+offset_bottom = 132.0
+
+[node name="Sprite2D" type="Sprite2D" parent="popup_panel"]
+z_index = 20
+scale = Vector2(0.423565, 0.423565)
+texture = ExtResource("4_s0jxo")
+
+[node name="Keycode" type="TextEdit" parent="popup_panel"]
+z_index = 20
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 0
+offset_left = -221.0
+offset_top = 193.0
+offset_right = 179.0
+offset_bottom = 253.0
+theme_override_fonts/font = ExtResource("5_axvmy")
+theme_override_font_sizes/font_size = 36
+placeholder_text = "Keycode: "
+
+[node name="EnterButton" type="Button" parent="popup_panel"]
+z_index = 20
+layout_mode = 0
+offset_left = 183.0
+offset_top = 199.0
+offset_right = 272.0
+offset_bottom = 249.0
+theme_override_fonts/font = ExtResource("6_d0cgi")
+theme_override_font_sizes/font_size = 32
+text = "Enter"
+
+[node name="YesNo_label" type="Label" parent="popup_panel"]
+z_index = 20
+layout_mode = 0
+offset_left = -104.0
+offset_top = -236.0
+offset_right = 112.0
+offset_bottom = -194.0
+theme_override_fonts/font = ExtResource("7_86mmp")
+theme_override_font_sizes/font_size = 32
+text = "Enter Keycode:"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="popup_panel/EnterButton" to="." method="_on_enter_button_pressed"]

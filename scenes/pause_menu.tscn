@@ -1,9 +1,61 @@
-[gd_scene format=3 uid="uid://dg4w8ky3tmhj4"]
+[gd_scene load_steps=4 format=3 uid="uid://duw5as6jjuxs8"]
 
-[node name="Pause Menu" type="Control"]
+[ext_resource type="FontFile" uid="uid://dp2x6fhks2lvv" path="res://assets/Font/ChakraPetch-SemiBold.ttf" id="1_hblyv"]
+[ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_y4fhf"]
+[ext_resource type="FontFile" uid="uid://ch2dudecawva1" path="res://assets/Font/ChakraPetch-Medium.ttf" id="2_jv7tq"]
+
+[node name="pause_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_y4fhf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 20
+layout_mode = 0
+offset_right = 2000.0
+offset_bottom = 1300.0
+color = Color(0.882353, 0.439216, 0.894118, 0.372549)
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+z_index = 21
+layout_mode = 2
+offset_left = 819.0
+offset_top = 497.0
+offset_right = 1113.0
+offset_bottom = 692.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+z_index = 21
+layout_mode = 2
+
+[node name="PauseLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+z_index = 21
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_hblyv")
+theme_override_font_sizes/font_size = 46
+text = "Game Paused"
+
+[node name="ResumeButton" type="Button" parent="PanelContainer/VBoxContainer"]
+z_index = 21
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_jv7tq")
+theme_override_font_sizes/font_size = 42
+text = "Resume"
+icon_alignment = 1
+
+[node name="QuitButton" type="Button" parent="PanelContainer/VBoxContainer"]
+z_index = 21
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_jv7tq")
+theme_override_font_sizes/font_size = 42
+text = "Quit"
+icon_alignment = 1
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

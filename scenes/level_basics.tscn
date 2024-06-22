@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://vvvewgaanhnq"]
+
+[ext_resource type="Texture2D" uid="uid://dy1qe3w4hvnh" path="res://assets/art/GJ_placeholder_bg_01.png" id="1_46kkt"]
+[ext_resource type="PackedScene" uid="uid://0mb4o8vqfcvj" path="res://scenes/next_level.tscn" id="3_pmbej"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cp1qh"]
+distance = -564.0
+
+[node name="Level Basics" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+light_mask = 0
+scale = Vector2(0.750746, 0.751751)
+texture = ExtResource("1_46kkt")
+
+[node name="ground" type="StaticBody2D" parent="."]
+position = Vector2(0, -119)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
+position = Vector2(0, -18)
+shape = SubResource("WorldBoundaryShape2D_cp1qh")
+
+[node name="Next Level" parent="." instance=ExtResource("3_pmbej")]
+position = Vector2(-786, -24)
+
+[node name="Next Level2" parent="." instance=ExtResource("3_pmbej")]
+position = Vector2(787, -8)
+
+[node name="Camera2D" type="Camera2D" parent="."]

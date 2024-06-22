@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://dutjmmi4jqeta"]
+
+[ext_resource type="Script" path="res://scripts/Interactable.gd" id="1_gh5hl"]
+[ext_resource type="Texture2D" uid="uid://camew5ngn03ts" path="res://assets/art/GJ_placeholder_postit_button_01.png" id="2_4r2ui"]
+[ext_resource type="Texture2D" uid="uid://d2ubvohv34c78" path="res://assets/art/GJ_placeholder_postit_01.png" id="3_at1r2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qjfwo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u2qf1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3qig4"]
+
+[node name="sticky_note" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_gh5hl")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qjfwo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_u2qf1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3qig4")
+icon = ExtResource("2_4r2ui")
+icon_alignment = 1
+
+[node name="popup_panel" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -148.346
+offset_top = 100.267
+offset_right = -108.346
+offset_bottom = 140.267
+
+[node name="Sprite2D" type="Sprite2D" parent="popup_panel"]
+z_index = 20
+position = Vector2(-31.6539, -35.2673)
+scale = Vector2(0.386023, 0.38334)
+texture = ExtResource("3_at1r2")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
