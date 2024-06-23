@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://ctm8w6rqlukfh"]
+
+[ext_resource type="Texture2D" uid="uid://bphy3mgb7ma11" path="res://assets/art/tesla.png" id="1_e2suu"]
+[ext_resource type="Script" path="res://scripts/tesla_coil.gd" id="1_ypglk"]
+[ext_resource type="Texture2D" uid="uid://cmmucrna1wvf6" path="res://assets/art/tesladamage.png" id="2_hry47"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upe0d"]
+atlas = ExtResource("1_e2suu")
+region = Rect2(0, 0, 645, 1200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3a6fs"]
+atlas = ExtResource("2_hry47")
+region = Rect2(0, 0, 645, 1200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mcpee"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_upe0d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3a6fs")
+}],
+"loop": true,
+"name": &"destroyed",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oemp2"]
+size = Vector2(641, 1178)
+
+[node name="Tesla_Coil" type="Node2D"]
+script = ExtResource("1_ypglk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mcpee")
+
+[node name="Area2D" type="Area2D" parent="." groups=["tesla_coil"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-10.5, -12)
+shape = SubResource("RectangleShape2D_oemp2")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
