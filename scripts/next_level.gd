@@ -2,24 +2,20 @@ extends Area2D
 
 var unlocked = false
 
-#func _process(delta):
-	#print("unlocked = ", unlocked)
-
 func _on_body_entered(body):
-	if body.is_in_group("Player") and unlocked == true:
-		var current_scene_file = get_tree().current_scene.scene_file_path
-		var next_level_number = current_scene_file.to_int() + 1
-		print(next_level_number)
-		
-		var next_level_path = "res://scenes/levels/level_" + str(next_level_number) + ".tscn"
-		print(next_level_path)
-		get_tree().change_scene_to_file(next_level_path)
-		unlocked = false
+	if body.is_in_group("Player") and unlocked:
+		get_tree().change_scene_to_file("res://scenes/levels/level_2.tscn") 
+	elif body.is_in_group("Player") and not unlocked:
+		print("The door is locked.")
 	else:
-		print("the door is locked.")
+		print("Another body entered the area.")
 
 func level_beat():
-	if unlocked == false:
+	if not unlocked:
 		unlocked = true
+		print("The level is unlocked.")
 	else:
-		return
+		print("The level is already unlocked.")
+
+func is_unlocked():
+	return unlocked

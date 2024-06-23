@@ -12,7 +12,8 @@
 
 [node name="level_1" type="Node2D"]
 
-[node name="Level Basics" parent="." instance=ExtResource("1_3tb64")]
+[node name="Level_Basics" parent="." instance=ExtResource("1_3tb64")]
+position = Vector2(2, 24)
 
 [node name="Player" parent="." instance=ExtResource("1_cuy7i")]
 visibility_layer = 2

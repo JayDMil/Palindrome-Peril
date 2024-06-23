@@ -23,10 +23,10 @@ position = Vector2(0, -119)
 position = Vector2(0, -18)
 shape = SubResource("WorldBoundaryShape2D_cp1qh")
 
-[node name="Next Level" parent="." instance=ExtResource("3_pmbej")]
+[node name="Next_Level" parent="." instance=ExtResource("3_pmbej")]
 position = Vector2(-781, -2)
 
-[node name="Next Level2" parent="." instance=ExtResource("3_pmbej")]
+[node name="Next_Level2" parent="." instance=ExtResource("3_pmbej")]
 position = Vector2(777, -5)
 rotation = 3.14159
 
