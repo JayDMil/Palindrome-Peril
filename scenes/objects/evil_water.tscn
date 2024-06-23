@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dc2qrsvddd5fy"]
+[gd_scene load_steps=4 format=3 uid="uid://dc2qrsvddd5fy"]
 
 [ext_resource type="Script" path="res://scripts/water.gd" id="1_8falg"]
 [ext_resource type="Texture2D" uid="uid://12v72ab7c314" path="res://assets/art/evilwater.png" id="1_80k4j"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hdfv4"]
+size = Vector2(970.29, 764.117)
+
 [node name="evil_water" type="Sprite2D"]
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.203111, 0.203111)
 texture = ExtResource("1_80k4j")
 script = ExtResource("1_8falg")
 
@@ -17,5 +20,18 @@ offset_bottom = -575.0
 scale = Vector2(82.274, 82.274)
 flat = true
 
+[node name="Area2D" type="Area2D" parent="." groups=["water"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-61.5425, -4.69533e-06)
+scale = Vector2(0.906631, -1.43041)
+shape = SubResource("RectangleShape2D_hdfv4")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

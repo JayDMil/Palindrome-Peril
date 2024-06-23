@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://vvvewgaanhnq"]
+[gd_scene load_steps=5 format=3 uid="uid://vvvewgaanhnq"]
 
 [ext_resource type="Texture2D" uid="uid://codi4pcg3lp0e" path="res://assets/art/GJ_placeholder_background_01.png" id="1_7oadd"]
 [ext_resource type="PackedScene" uid="uid://0mb4o8vqfcvj" path="res://scenes/next_level.tscn" id="3_pmbej"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cp1qh"]
 distance = -564.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j22vi"]
+size = Vector2(273, 1035)
 
 [node name="Level Basics" type="Node2D"]
 
@@ -28,3 +31,17 @@ position = Vector2(777, -5)
 rotation = 3.14159
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-1024, -2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(126.5, -12.5)
+shape = SubResource("RectangleShape2D_j22vi")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(779, -2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(126.5, -12.5)
+shape = SubResource("RectangleShape2D_j22vi")

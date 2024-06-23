@@ -1,9 +1,9 @@
 extends Area2D
 
-var unlocked = true
+var unlocked = false
 
-func _ready():
-	var unlocked = false
+#func _process(delta):
+	#print("unlocked = ", unlocked)
 
 func _on_body_entered(body):
 	if body.is_in_group("Player") and unlocked == true:

@@ -1,3 +1,41 @@
-[gd_scene format=3 uid="uid://dtykx5gx4hccj"]
+[gd_scene load_steps=3 format=3 uid="uid://dtykx5gx4hccj"]
+
+[ext_resource type="FontFile" uid="uid://ch2dudecawva1" path="res://assets/Font/ChakraPetch-Medium.ttf" id="1_66m2k"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_h3bsj"]
 
 [node name="Main Menu" type="Node2D"]
+script = ExtResource("1_h3bsj")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(87, 38)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_66m2k")
+theme_override_font_sizes/font_size = 24
+text = "Start Game"
+icon_alignment = 1
+
+[node name="QuitButton" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_66m2k")
+theme_override_font_sizes/font_size = 24
+text = "Exit to Desktop"
+
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

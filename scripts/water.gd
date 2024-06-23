@@ -2,6 +2,8 @@ extends Sprite2D
 
 var dragging = false
 var of = Vector2(0,0)
+@onready var timer = $Timer
+
 
 func _process(delta):
 	if dragging:
@@ -17,3 +19,13 @@ func _on_button_button_down():
 func _on_button_button_up():
 	print("release")
 	dragging = false
+
+
+
+func _on_area_2d_area_entered(area):
+	if area.is_in_group("tesla_coil"):
+		timer.start()	
+
+
+func _on_timer_timeout():
+	queue_free()

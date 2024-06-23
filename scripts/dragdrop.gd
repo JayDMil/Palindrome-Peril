@@ -2,8 +2,8 @@ extends Sprite2D
 
 var dragging = false
 var of = Vector2(0,0)
+@onready var area_2d = $Area2D
 
-var evil_water = preload("res://scenes/objects/evil_water.tscn")
 
 func _process(delta):
 	if dragging:
@@ -22,16 +22,5 @@ func _on_button_button_up():
 
 
 func _on_area_2d_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
-	if area.is_in_group("evil_water_components"):
-		print("combined!")
-		create_evil_water(Vector2(0,0))
-		create_evil_water(Vector2(-543,-349))
-
-
-func create_evil_water(pos):
-	print("evil water made")
-	var instance = evil_water.instantiate()
-	instance.position = pos
-	add_child(instance)
-
-
+	if area.is_in_group("water_maker"):
+		area_2d.queue_free()
