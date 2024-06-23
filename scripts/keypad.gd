@@ -6,7 +6,11 @@ var popup_hidden = true
 @onready var yesno_label = $popup_panel/YesNo_label
 @onready var next_levels = [
 	get_node("/root/level_1/Level_Basics/Next_Level"),
-	get_node("/root/level_1/Level_Basics/Next_Level2")
+	get_node("/root/level_1/Level_Basics/Next_Level2"),
+	get_node("/root/level_2/Level_Basics/Next_Level"),
+	get_node("/root/level_2/Level_Basics/Next_Level2"),
+	get_node("/root/level_3/Level_Basics/Next_Level"),
+	get_node("/root/level_3/Level_Basics/Next_Level2")
 ]
 
 func _on_button_pressed():

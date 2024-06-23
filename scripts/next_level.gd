@@ -1,10 +1,12 @@
 extends Area2D
 
 var unlocked = false
+var next_level_number = 2
 
 func _on_body_entered(body):
 	if body.is_in_group("Player") and unlocked:
-		get_tree().change_scene_to_file("res://scenes/levels/level_2.tscn") 
+		var next_level_path = "res://scenes/levels/level_" + str(next_level_number) + ".tscn"
+		get_tree().change_scene_to_file(next_level_path)
 	elif body.is_in_group("Player") and not unlocked:
 		print("The door is locked.")
 	else:
