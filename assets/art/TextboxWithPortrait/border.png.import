@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3v834sq40le3"
-path="res://.godot/imported/book3.png-9d3d735c5d04370bd111cd29a09441a7.ctex"
+uid="uid://by8vvnf6a8a0o"
+path="res://.godot/imported/border.png-2688e1b5c5e26cb7c19b0d7517a9776b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/book3.png"
-dest_files=["res://.godot/imported/book3.png-9d3d735c5d04370bd111cd29a09441a7.ctex"]
+source_file="res://assets/art/TextboxWithPortrait/border.png"
+dest_files=["res://.godot/imported/border.png-2688e1b5c5e26cb7c19b0d7517a9776b.ctex"]
 
 [params]
 

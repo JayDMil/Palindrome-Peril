@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vvswmq1ht4o3"
-path="res://.godot/imported/beaker3.png-bba46f440be45a209b1eea575fc2e3a0.ctex"
+uid="uid://fgff3imwi5fk"
+path="res://.godot/imported/GJ_placeholder_door_02.png-49f4155836f36ab64d379220a31078bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/beaker3.png"
-dest_files=["res://.godot/imported/beaker3.png-bba46f440be45a209b1eea575fc2e3a0.ctex"]
+source_file="res://assets/art/props/GJ_placeholder_door_02.png"
+dest_files=["res://.godot/imported/GJ_placeholder_door_02.png-49f4155836f36ab64d379220a31078bd.ctex"]
 
 [params]
 

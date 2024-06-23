@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="1_vjo8k"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_g2iho"]
-[ext_resource type="PackedScene" uid="uid://d1wclcbm5giv6" path="res://TextboxWithPortrait/custom_textbox_with_speaker_portrait.tscn" id="3_t025p"]
+[ext_resource type="PackedScene" uid="uid://d1wclcbm5giv6" path="res://assets/art/TextboxWithPortrait/custom_textbox_with_speaker_portrait.tscn" id="3_k38rn"]
 [ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="4_jnbd0"]
 [ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="5_aulkm"]
 [ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="6_rmxnd"]
@@ -17,7 +17,7 @@ overrides = {}
 
 [sub_resource type="Resource" id="Resource_btuer"]
 script = ExtResource("2_g2iho")
-scene = ExtResource("3_t025p")
+scene = ExtResource("3_k38rn")
 overrides = {
 "box_modulate_custom_color": "Color(0.352941, 0.368627, 0.376471, 1)"
 }

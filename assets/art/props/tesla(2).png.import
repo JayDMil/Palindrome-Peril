@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqgnpckfsgf3y"
-path="res://.godot/imported/book1.png-5c1edc87587ded16af153fa259ad5b05.ctex"
+uid="uid://bu5yvmjfchdht"
+path="res://.godot/imported/tesla(2).png-eff88e112c21071975e908920ab27c01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/book1.png"
-dest_files=["res://.godot/imported/book1.png-5c1edc87587ded16af153fa259ad5b05.ctex"]
+source_file="res://assets/art/props/tesla(2).png"
+dest_files=["res://.godot/imported/tesla(2).png-eff88e112c21071975e908920ab27c01.ctex"]
 
 [params]
 

@@ -1,13 +1,113 @@
-[gd_scene load_steps=4 format=3 uid="uid://ca1bkihvv5rxm"]
+[gd_scene load_steps=16 format=3 uid="uid://ca1bkihvv5rxm"]
 
 [ext_resource type="PackedScene" uid="uid://vvvewgaanhnq" path="res://scenes/level_basics.tscn" id="1_jgnhh"]
 [ext_resource type="Script" path="res://scripts/level_3.gd" id="1_ql5qk"]
+[ext_resource type="FontFile" uid="uid://ch2dudecawva1" path="res://assets/Font/ChakraPetch-Medium.ttf" id="2_chyw4"]
 [ext_resource type="PackedScene" uid="uid://dgyuoupsgu1ut" path="res://scenes/player.tscn" id="2_var6t"]
+[ext_resource type="Texture2D" uid="uid://baenb1kxtm5b5" path="res://assets/art/spritesheet(1).png" id="5_ftgkf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0wmp"]
+atlas = ExtResource("5_ftgkf")
+region = Rect2(0, 0, 550, 1202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0p0tp"]
+atlas = ExtResource("5_ftgkf")
+region = Rect2(550, 0, 550, 1202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0cha"]
+atlas = ExtResource("5_ftgkf")
+region = Rect2(1100, 0, 550, 1202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ktutq"]
+atlas = ExtResource("5_ftgkf")
+region = Rect2(1650, 0, 550, 1202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2epk"]
+atlas = ExtResource("5_ftgkf")
+region = Rect2(2200, 0, 550, 1202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4c1ew"]
+atlas = ExtResource("5_ftgkf")
+region = Rect2(0, 1202, 550, 1202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bk2qf"]
+atlas = ExtResource("5_ftgkf")
+region = Rect2(550, 1202, 550, 1202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ogak"]
+atlas = ExtResource("5_ftgkf")
+region = Rect2(1100, 1202, 550, 1202)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hu6yi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0wmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0p0tp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0cha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ktutq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2epk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4c1ew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bk2qf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ogak")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qvwl"]
+size = Vector2(296, 639)
 
 [node name="level_3" type="Node2D"]
 script = ExtResource("1_ql5qk")
 
+[node name="Level Text" type="Label" parent="."]
+z_index = 20
+texture_repeat = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -117.5
+offset_top = -549.0
+offset_right = 117.5
+offset_bottom = -475.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_chyw4")
+theme_override_font_sizes/font_size = 56
+text = "Level 1 Again!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Level Basics" parent="." instance=ExtResource("1_jgnhh")]
 
 [node name="Player" parent="." instance=ExtResource("2_var6t")]
-position = Vector2(332, 138)
+position = Vector2(-18, 135)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-3, -3)
+
+[node name="Bernie" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(328, 104)
+scale = Vector2(0.538429, 0.538429)
+sprite_frames = SubResource("SpriteFrames_hu6yi")
+autoplay = "default"
+frame_progress = 0.636919
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(327, 106.5)
+shape = SubResource("RectangleShape2D_1qvwl")

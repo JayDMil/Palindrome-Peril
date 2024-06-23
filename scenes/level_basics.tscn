@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://vvvewgaanhnq"]
+[gd_scene load_steps=6 format=3 uid="uid://vvvewgaanhnq"]
 
 [ext_resource type="Texture2D" uid="uid://codi4pcg3lp0e" path="res://assets/art/GJ_placeholder_background_01.png" id="1_7oadd"]
 [ext_resource type="PackedScene" uid="uid://0mb4o8vqfcvj" path="res://scenes/next_level.tscn" id="3_pmbej"]
+[ext_resource type="Texture2D" uid="uid://by8vvnf6a8a0o" path="res://assets/art/TextboxWithPortrait/border.png" id="3_tpnw0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cp1qh"]
 distance = -564.0
@@ -23,12 +24,17 @@ position = Vector2(0, -119)
 position = Vector2(0, -18)
 shape = SubResource("WorldBoundaryShape2D_cp1qh")
 
+[node name="Next Level" parent="." instance=ExtResource("3_pmbej")]
+z_index = 19
 [node name="Next_Level" parent="." instance=ExtResource("3_pmbej")]
 position = Vector2(-781, -2)
 
+[node name="Next Level2" parent="." instance=ExtResource("3_pmbej")]
+z_index = 19
 [node name="Next_Level2" parent="." instance=ExtResource("3_pmbej")]
 position = Vector2(777, -5)
 rotation = 3.14159
+scale = Vector2(0.998486, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -45,3 +51,17 @@ position = Vector2(779, -2)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(126.5, -12.5)
 shape = SubResource("RectangleShape2D_j22vi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 18
+scale = Vector2(0.652689, 0.652689)
+texture = ExtResource("3_tpnw0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -1632.0
+offset_top = -907.0
+offset_right = -1592.0
+offset_bottom = -867.0
+scale = Vector2(84.7716, 46.3271)
+color = Color(0.219608, 0.176471, 0.243137, 1)
