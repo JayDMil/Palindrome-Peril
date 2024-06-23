@@ -26,7 +26,16 @@ directories/dch_directory={
 "Vill Ann": "res://Vill Ann.dch"
 }
 directories/dtl_directory={
-"timeline": "res://timeline.dtl"
+"book_text": "res://timelines/book_text.dtl",
+"enter_lvl_1": "res://timelines/enter_lvl_1.dtl",
+"enter_lvl_2": "res://timelines/enter_lvl_2.dtl",
+"stickynote_1": "res://timelines/stickynote_1.dtl",
+"stickynote_2": "res://timelines/stickynote_2.dtl",
+"tesla_broken": "res://timelines/tesla_broken.dtl",
+"timeline": "res://timeline.dtl",
+"transgeender": "res://timelines/transgeender.dtl",
+"water_maker_text": "res://timelines/water_maker_text.dtl",
+"water_text": "res://timelines/water_text.dtl"
 }
 layout/style_list=["res://assets/art/Custom_Style_Textbox.tres"]
 layout/default_style="res://assets/art/Custom_Style_Textbox.tres"

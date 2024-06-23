@@ -11,11 +11,11 @@ func _on_button_pressed():
 	else:
 		popup.hide()
 		popup_hidden = true
-		Dialogic.start("stickynote_1")
+		Dialogic.start("stickynote_2")
 
 
 func _process(delta):
 	if Input.is_action_just_pressed("back") and popup_hidden == false:
 		popup.hide()
 		popup_hidden = true
-		Dialogic.start("stickynote_1")
+		Dialogic.start("stickynote_2")

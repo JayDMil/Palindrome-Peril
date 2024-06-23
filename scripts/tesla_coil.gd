@@ -6,3 +6,5 @@ func _on_area_2d_area_shape_entered(area_rid, area, area_shape_index, local_shap
 	if area.is_in_group("water"):
 		print("ZAP!")
 		animated_sprite.play("destroyed")
+		Dialogic.start("tesla_broken")
+		

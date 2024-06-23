@@ -78,8 +78,16 @@ scale = Vector2(0.951523, 0.960364)
 position = Vector2(-16, -32)
 shape = SubResource("RectangleShape2D_77md8")
 
+[node name="Button" type="Button" parent="WaterMaker"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -568.0
+offset_top = -563.0
+offset_right = 363.0
+offset_bottom = 668.0
+
 [node name="Tesla_Coil" parent="." instance=ExtResource("10_tx2dh")]
 position = Vector2(620, -312)
 scale = Vector2(0.245771, 0.245771)
 
 [connection signal="area_shape_entered" from="WaterMaker/Area2D" to="." method="_on_area_2d_area_shape_entered"]
+[connection signal="pressed" from="WaterMaker/Button" to="." method="_on_button_pressed"]

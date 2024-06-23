@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dv1mj2enuffte"]
 
-[ext_resource type="Script" path="res://scripts/Interactable.gd" id="1_ygvf2"]
+[ext_resource type="Script" path="res://scripts/sticky_note_2.gd" id="1_jddow"]
 [ext_resource type="Texture2D" uid="uid://camew5ngn03ts" path="res://assets/art/GJ_placeholder_postit_button_01.png" id="2_u7u2x"]
 [ext_resource type="Texture2D" uid="uid://b3qjb3gqqaind" path="res://assets/art/GJ_placeholder_postit_02(3).png" id="3_awnwj"]
 
@@ -17,7 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ygvf2")
+script = ExtResource("1_jddow")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
