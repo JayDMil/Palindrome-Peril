@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dchx54jty5nd"]
+[gd_scene load_steps=13 format=3 uid="uid://dchx54jty5nd"]
 
 [ext_resource type="Script" path="res://scripts/water_maker.gd" id="1_4lyd3"]
 [ext_resource type="PackedScene" uid="uid://vvvewgaanhnq" path="res://scenes/level_basics.tscn" id="1_o4b18"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://od6uyva3tdtv" path="res://scenes/objects/hydrogen_bottle.tscn" id="6_x0dxm"]
 [ext_resource type="PackedScene" uid="uid://cp7v7qwsgr8rk" path="res://scenes/objects/oxygen_bottle.tscn" id="7_ntbyh"]
 [ext_resource type="Texture2D" uid="uid://cafi5v0f3wbt1" path="res://assets/art/props/stand(1).png" id="9_q35pe"]
+[ext_resource type="AudioStream" uid="uid://bmvpuwbmw104r" path="res://assets/sounds/bubbles-03-91268.mp3" id="10_muuj5"]
 [ext_resource type="PackedScene" uid="uid://ctm8w6rqlukfh" path="res://scenes/objects/tesla_coil.tscn" id="10_tx2dh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_77md8"]
@@ -84,6 +85,10 @@ offset_left = -568.0
 offset_top = -563.0
 offset_right = 363.0
 offset_bottom = 668.0
+
+[node name="WaterBubbles" type="AudioStreamPlayer2D" parent="WaterMaker"]
+stream = ExtResource("10_muuj5")
+volume_db = -5.647
 
 [node name="Tesla_Coil" parent="." instance=ExtResource("10_tx2dh")]
 position = Vector2(620, -312)

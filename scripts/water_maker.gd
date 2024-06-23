@@ -1,6 +1,8 @@
 extends Node2D
 
 var evil_water = preload("res://scenes/objects/evil_water.tscn")
+@onready var water_bubbles = $WaterMaker/WaterBubbles
+
 var num_bottles = 0
 var is_water_made_yet = false
 
@@ -19,6 +21,7 @@ func _on_area_2d_area_shape_entered(area_rid, area, area_shape_index, local_shap
 
 func create_evil_water(pos):
 	print("evil water made")
+	water_bubbles.play()
 	Dialogic.start("water_text")
 	var instance = evil_water.instantiate()
 	instance.position = pos

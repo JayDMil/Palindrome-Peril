@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://ctm8w6rqlukfh"]
+[gd_scene load_steps=10 format=3 uid="uid://ctm8w6rqlukfh"]
 
 [ext_resource type="Script" path="res://scripts/tesla_coil.gd" id="1_ypglk"]
 [ext_resource type="Texture2D" uid="uid://bu5yvmjfchdht" path="res://assets/art/props/tesla(2).png" id="2_ojeqj"]
 [ext_resource type="Texture2D" uid="uid://bxxp8ktt6wleb" path="res://assets/art/props/tesladamaged(1).png" id="3_oywtu"]
+[ext_resource type="AudioStream" uid="uid://gc4tuoxoc5fb" path="res://assets/sounds/bug-zapper-47300.mp3" id="4_6gxf3"]
+[ext_resource type="AudioStream" uid="uid://cpre416w34im1" path="res://assets/sounds/opening-metal-door-199581.mp3" id="5_f7oob"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f1tmf"]
 atlas = ExtResource("2_ojeqj")
@@ -45,6 +47,14 @@ sprite_frames = SubResource("SpriteFrames_mcpee")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-10.5, -12)
 shape = SubResource("RectangleShape2D_oemp2")
+
+[node name="zap_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_6gxf3")
+volume_db = -12.62
+
+[node name="doors_unlocked" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_f7oob")
+volume_db = -5.0
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]

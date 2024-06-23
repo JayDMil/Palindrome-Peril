@@ -3,7 +3,7 @@ extends Sprite2D
 var dragging = false
 var of = Vector2(0,0)
 @onready var area_2d = $Area2D
-
+@onready var bottle_clink = $bottle_clink
 
 func _process(delta):
 	if dragging:
@@ -12,6 +12,7 @@ func _process(delta):
 
 func _on_button_button_down():
 	print("click")
+	bottle_clink.play()
 	dragging = true
 	of = get_global_mouse_position() - global_position
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cp7v7qwsgr8rk"]
+[gd_scene load_steps=5 format=3 uid="uid://cp7v7qwsgr8rk"]
 
 [ext_resource type="Texture2D" uid="uid://bi25vmu2wncif" path="res://assets/art/props/beaker2.png" id="1_7iwma"]
 [ext_resource type="Script" path="res://scripts/dragdrop.gd" id="1_xka4l"]
+[ext_resource type="AudioStream" uid="uid://boo7ckqvhrv6a" path="res://assets/sounds/bottle_clink_1.mp3" id="3_fawcn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_342eg"]
 size = Vector2(350.996, 390.623)
@@ -31,6 +32,10 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(-1.80945, 1.38051e-05)
 scale = Vector2(1.10322, 1.48232)
 shape = SubResource("RectangleShape2D_342eg")
+
+[node name="bottle_clink" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_fawcn")
+volume_db = -4.685
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
