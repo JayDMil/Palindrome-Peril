@@ -8,6 +8,7 @@ var current_level = 1
 
 func _ready():
 	current_level = next_level_number
+	unlocked = false
 
 func _on_body_entered(body):
 	if body.is_in_group("Player") and unlocked:
@@ -28,3 +29,4 @@ func level_beat():
 			next_level_number = MAX_LEVEL
 	else:
 		print("The level is already unlocked.")
+
