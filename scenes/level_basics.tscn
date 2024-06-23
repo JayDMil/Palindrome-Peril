@@ -24,29 +24,25 @@ position = Vector2(0, -119)
 position = Vector2(0, -18)
 shape = SubResource("WorldBoundaryShape2D_cp1qh")
 
-[node name="Next Level" parent="." instance=ExtResource("3_pmbej")]
-z_index = 19
 [node name="Next_Level" parent="." instance=ExtResource("3_pmbej")]
-position = Vector2(-781, -2)
+position = Vector2(-700, -2)
 
-[node name="Next Level2" parent="." instance=ExtResource("3_pmbej")]
-z_index = 19
 [node name="Next_Level2" parent="." instance=ExtResource("3_pmbej")]
-position = Vector2(777, -5)
+position = Vector2(700, -5)
 rotation = 3.14159
 scale = Vector2(0.998486, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(-1024, -2)
+position = Vector2(-950, -2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(126.5, -12.5)
 shape = SubResource("RectangleShape2D_j22vi")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(779, -2)
+position = Vector2(700, -2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(126.5, -12.5)
@@ -59,9 +55,9 @@ texture = ExtResource("3_tpnw0")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
-offset_left = -1632.0
-offset_top = -907.0
-offset_right = -1592.0
-offset_bottom = -867.0
+offset_left = -1658.0
+offset_top = -880.0
+offset_right = -1618.0
+offset_bottom = -840.0
 scale = Vector2(84.7716, 46.3271)
 color = Color(0.219608, 0.176471, 0.243137, 1)
