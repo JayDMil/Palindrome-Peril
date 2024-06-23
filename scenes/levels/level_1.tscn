@@ -25,10 +25,10 @@ z_index = 1
 position = Vector2(-4, 137)
 
 [node name="sticky_note" parent="." instance=ExtResource("3_m0qaf")]
-offset_left = 492.0
-offset_top = -103.0
-offset_right = 492.0
-offset_bottom = -103.0
+offset_left = 495.0
+offset_top = -80.0
+offset_right = 495.0
+offset_bottom = -80.0
 scale = Vector2(0.690835, 0.690835)
 
 [node name="Level Text" type="Label" parent="."]
@@ -38,9 +38,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -84.5
-offset_top = -549.0
+offset_top = -523.0
 offset_right = 84.5
-offset_bottom = -475.0
+offset_bottom = -449.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("3_yjet1")
 theme_override_font_sizes/font_size = 56
@@ -50,13 +50,13 @@ vertical_alignment = 1
 
 [node name="Keypad" parent="." instance=ExtResource("5_8frci")]
 offset_left = -297.0
-offset_top = -115.0
+offset_top = -90.0
 offset_right = -297.0
-offset_bottom = -115.0
+offset_bottom = -90.0
 scale = Vector2(0.749643, 0.749643)
 
 [node name="Books" type="Node2D" parent="."]
-position = Vector2(114, -172)
+position = Vector2(114, -146)
 scale = Vector2(0.121064, 0.125239)
 
 [node name="BlueBook" type="Sprite2D" parent="Books"]
@@ -75,7 +75,12 @@ scale = Vector2(1.89982, 1.89982)
 texture = ExtResource("6_hfv6x")
 
 [node name="BlueBook4" type="Sprite2D" parent="Books"]
-position = Vector2(1131.63, 1525.08)
+position = Vector2(1115.11, 1525.08)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("6_hfv6x")
+
+[node name="BlueBook6" type="Sprite2D" parent="Books"]
+position = Vector2(-413.005, 1525.08)
 scale = Vector2(1.89982, 1.89982)
 texture = ExtResource("6_hfv6x")
 
@@ -91,6 +96,12 @@ texture = ExtResource("7_b3w2d")
 
 [node name="RedBook2" type="Sprite2D" parent="Books"]
 position = Vector2(2131.1, 2882.49)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("7_b3w2d")
+
+[node name="RedBook3" type="Sprite2D" parent="Books"]
+position = Vector2(-115.641, 3066.14)
+rotation = 1.5708
 scale = Vector2(1.89982, 1.89982)
 texture = ExtResource("7_b3w2d")
 
@@ -121,6 +132,12 @@ texture = ExtResource("8_o58ig")
 
 [node name="YellowBook6" type="Sprite2D" parent="Books"]
 position = Vector2(1197.71, 2882.49)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("8_o58ig")
+
+[node name="YellowBook8" type="Sprite2D" parent="Books"]
+position = Vector2(-99.1211, 2658.92)
+rotation = 1.5708
 scale = Vector2(1.89982, 1.89982)
 texture = ExtResource("8_o58ig")
 
@@ -179,6 +196,11 @@ position = Vector2(1470.3, 2874.5)
 scale = Vector2(1.89982, 1.89982)
 texture = ExtResource("11_drgmq")
 
+[node name="OtherBook10" type="Sprite2D" parent="Books"]
+position = Vector2(1470.3, 2874.5)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("11_drgmq")
+
 [node name="OtherBook7" type="Sprite2D" parent="Books"]
 position = Vector2(1635.5, 1533.07)
 scale = Vector2(1.89982, 1.89982)
@@ -186,6 +208,11 @@ texture = ExtResource("10_coquq")
 
 [node name="OtherBook8" type="Sprite2D" parent="Books"]
 position = Vector2(-74.3411, 1533.07)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("10_coquq")
+
+[node name="OtherBook11" type="Sprite2D" parent="Books"]
+position = Vector2(-74.3411, 1525.08)
 scale = Vector2(1.89982, 1.89982)
 texture = ExtResource("10_coquq")
 
@@ -208,5 +235,17 @@ offset_right = 724.0
 offset_bottom = 26.0
 rotation = 0.375702
 
+[node name="QuitButton" type="Button" parent="."]
+z_index = 20
+offset_left = -701.0
+offset_top = -444.0
+offset_right = -659.0
+offset_bottom = -413.0
+theme_override_fonts/font = ExtResource("3_yjet1")
+theme_override_font_sizes/font_size = 24
+text = "Quit
+"
+
 [connection signal="pressed" from="BookButton" to="." method="_on_book_button_pressed"]
 [connection signal="pressed" from="TransButton" to="." method="_on_trans_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

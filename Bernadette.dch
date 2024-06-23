@@ -8,25 +8,25 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "Vil_default",
+"default_portrait": "Bern_Default",
 "description": "",
-"display_name": "Vill Ann",
+"display_name": "Bernadette",
 "mirror": false,
-"nicknames": ["Vil"],
+"nicknames": ["Bernie"],
 "offset": Vector2(0, 0),
 "portraits": {
-"Vil_default": {
+"Bern_Default": {
 "export_overrides": {
-"image": "\"res://assets/art/dialogic art/GJ_DD_Vill_Portrait_01.png\""
+"image": "\"res://assets/art/dialogic art/GJ_DD_Bern_Portrait_01.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
-"Vil_surprise": {
+"Bern_Surprise": {
 "export_overrides": {
-"image": "\"res://assets/art/dialogic art/GJ_DD_Vill_Portrait_02.png\""
+"image": "\"res://assets/art/dialogic art/GJ_DD_Bern_Portrait_02.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

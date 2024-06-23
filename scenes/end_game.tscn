@@ -1,0 +1,139 @@
+[gd_scene load_steps=17 format=3 uid="uid://byqucb8ttm72w"]
+
+[ext_resource type="PackedScene" uid="uid://vvvewgaanhnq" path="res://scenes/level_basics.tscn" id="1_fda8m"]
+[ext_resource type="Script" path="res://scripts/end_game.gd" id="1_uqj2q"]
+[ext_resource type="FontFile" uid="uid://ch2dudecawva1" path="res://assets/Font/ChakraPetch-Medium.ttf" id="2_ql2oj"]
+[ext_resource type="PackedScene" uid="uid://dgyuoupsgu1ut" path="res://scenes/player.tscn" id="3_uxjfs"]
+[ext_resource type="Texture2D" uid="uid://baenb1kxtm5b5" path="res://assets/art/spritesheet(1).png" id="4_hf4if"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0wmp"]
+atlas = ExtResource("4_hf4if")
+region = Rect2(0, 0, 550, 1202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0p0tp"]
+atlas = ExtResource("4_hf4if")
+region = Rect2(550, 0, 550, 1202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0cha"]
+atlas = ExtResource("4_hf4if")
+region = Rect2(1100, 0, 550, 1202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ktutq"]
+atlas = ExtResource("4_hf4if")
+region = Rect2(1650, 0, 550, 1202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2epk"]
+atlas = ExtResource("4_hf4if")
+region = Rect2(2200, 0, 550, 1202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4c1ew"]
+atlas = ExtResource("4_hf4if")
+region = Rect2(0, 1202, 550, 1202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bk2qf"]
+atlas = ExtResource("4_hf4if")
+region = Rect2(550, 1202, 550, 1202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ogak"]
+atlas = ExtResource("4_hf4if")
+region = Rect2(1100, 1202, 550, 1202)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dk600"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0wmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0p0tp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0cha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ktutq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2epk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4c1ew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bk2qf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ogak")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_cy842"]
+resource_name = "fade_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.615571, 1),
+"update": 0,
+"values": [Color(0.219608, 0.176471, 0.243137, 0), Color(0.219608, 0.176471, 0.243137, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qlx28"]
+_data = {
+"fade_in": SubResource("Animation_cy842")
+}
+
+[node name="end_game" type="Node2D"]
+script = ExtResource("1_uqj2q")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Level Basics" parent="." instance=ExtResource("1_fda8m")]
+
+[node name="Level Text" type="Label" parent="Level Basics"]
+z_index = 20
+texture_repeat = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -117.5
+offset_top = -544.0
+offset_right = 117.5
+offset_bottom = -470.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ql2oj")
+theme_override_font_sizes/font_size = 56
+text = "Level 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player" parent="." instance=ExtResource("3_uxjfs")]
+position = Vector2(-18, 135)
+
+[node name="Bernie" type="AnimatedSprite2D" parent="."]
+position = Vector2(520, 104)
+scale = Vector2(0.538429, 0.538429)
+sprite_frames = SubResource("SpriteFrames_dk600")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 20
+offset_left = -1609.0
+offset_top = -878.0
+offset_right = 1642.0
+offset_bottom = 1038.0
+color = Color(0.219608, 0.176471, 0.243137, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qlx28")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

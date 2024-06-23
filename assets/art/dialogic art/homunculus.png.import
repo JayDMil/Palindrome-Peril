@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://12v72ab7c314"
-path="res://.godot/imported/evilwater.png-03caacf0ddc68a11e038b74d655cd02e.ctex"
+uid="uid://csjkvblkji2n2"
+path="res://.godot/imported/homunculus.png-055ba4dc99cd4230e4832f5fb35ba69e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/evilwater.png"
-dest_files=["res://.godot/imported/evilwater.png-03caacf0ddc68a11e038b74d655cd02e.ctex"]
+source_file="res://assets/art/dialogic art/homunculus.png"
+dest_files=["res://.godot/imported/homunculus.png-055ba4dc99cd4230e4832f5fb35ba69e.ctex"]
 
 [params]
 

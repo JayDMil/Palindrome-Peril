@@ -16,3 +16,7 @@ func _on_book_button_pressed():
 
 func _on_trans_button_pressed():
 	Dialogic.start("transgeender")
+
+
+func _on_quit_button_pressed():
+	get_tree().quit()

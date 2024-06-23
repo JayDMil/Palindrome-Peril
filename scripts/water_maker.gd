@@ -27,3 +27,7 @@ func create_evil_water(pos):
 
 func _on_button_pressed():
 	Dialogic.start("water_maker_text")
+
+
+func _on_quit_button_pressed():
+	get_tree().quit()

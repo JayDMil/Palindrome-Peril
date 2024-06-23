@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmmucrna1wvf6"
-path="res://.godot/imported/tesladamage.png-9df467723325d9f7db320a3068764d4d.ctex"
+uid="uid://ctwfnnxwim3v"
+path="res://.godot/imported/spritesheet(5).png-486b6a9bd912e96296a4beebb0e44514.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/tesladamage.png"
-dest_files=["res://.godot/imported/tesladamage.png-9df467723325d9f7db320a3068764d4d.ctex"]
+source_file="res://assets/art/spritesheet(5).png"
+dest_files=["res://.godot/imported/spritesheet(5).png-486b6a9bd912e96296a4beebb0e44514.ctex"]
 
 [params]
 

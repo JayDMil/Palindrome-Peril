@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu284yux56ojf"
-path="res://.godot/imported/GJ_DD_Vill_Portrait.png-9101f7e8585579eade1fcd76e7021abd.ctex"
+uid="uid://cvs74oib0bomg"
+path="res://.godot/imported/GJ_DD_Bern_Portrait_01.png-fdfb4107d5a4b3f8741e7af8c4e05ab9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/GJ_DD_Vill_Portrait.png"
-dest_files=["res://.godot/imported/GJ_DD_Vill_Portrait.png-9101f7e8585579eade1fcd76e7021abd.ctex"]
+source_file="res://assets/art/dialogic art/GJ_DD_Bern_Portrait_01.png"
+dest_files=["res://.godot/imported/GJ_DD_Bern_Portrait_01.png-fdfb4107d5a4b3f8741e7af8c4e05ab9.ctex"]
 
 [params]
 

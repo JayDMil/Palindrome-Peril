@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvho7yt0so04q"
-path="res://.godot/imported/hydrogen.png-555cc9c1fc6ec5c05ca771b3ffc2c657.ctex"
+uid="uid://e7cgdjdj80a1"
+path="res://.godot/imported/GJ_DD_Bern_Portrait_02.png-387da46bf7add584c3d2fa9525b87b9f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/hydrogen.png"
-dest_files=["res://.godot/imported/hydrogen.png-555cc9c1fc6ec5c05ca771b3ffc2c657.ctex"]
+source_file="res://assets/art/dialogic art/GJ_DD_Bern_Portrait_02.png"
+dest_files=["res://.godot/imported/GJ_DD_Bern_Portrait_02.png-387da46bf7add584c3d2fa9525b87b9f.ctex"]
 
 [params]
 

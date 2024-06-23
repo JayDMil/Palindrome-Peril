@@ -23,7 +23,7 @@ func _process(delta):
 		popup_hidden = true
 
 func _on_enter_button_pressed():
-	if $popup_panel/Keycode.text == "1234":
+	if $popup_panel/Keycode.text == "3746":
 		yesno_label.text = "Password Correct! Unlocking door..."
 		for next_level in next_levels:
 			if next_level != null:

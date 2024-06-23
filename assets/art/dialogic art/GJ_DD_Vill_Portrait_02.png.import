@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bphy3mgb7ma11"
-path="res://.godot/imported/tesla.png-24a3ae81876c1a203c2b90021ce1e7db.ctex"
+uid="uid://dldjo4irxf2oe"
+path="res://.godot/imported/GJ_DD_Vill_Portrait_02.png-3be7a4aad7cb00a8a30f664ff7d0d995.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/tesla.png"
-dest_files=["res://.godot/imported/tesla.png-24a3ae81876c1a203c2b90021ce1e7db.ctex"]
+source_file="res://assets/art/dialogic art/GJ_DD_Vill_Portrait_02.png"
+dest_files=["res://.godot/imported/GJ_DD_Vill_Portrait_02.png-3be7a4aad7cb00a8a30f664ff7d0d995.ctex"]
 
 [params]
 

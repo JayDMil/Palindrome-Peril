@@ -3,7 +3,7 @@ extends Node2D
 
 
 func _on_start_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
+	get_tree().change_scene_to_file("res://scenes/opening_cutsccene.tscn")
 
 
 func _on_quit_button_pressed():
