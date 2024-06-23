@@ -1,13 +1,16 @@
-[gd_scene load_steps=60 format=3 uid="uid://de4akngfotcs6"]
+[gd_scene load_steps=64 format=3 uid="uid://de4akngfotcs6"]
 
 [ext_resource type="Script" path="res://scripts/humonculus_cutscene.gd" id="1_8cah7"]
 [ext_resource type="PackedScene" uid="uid://vvvewgaanhnq" path="res://scenes/level_basics.tscn" id="2_8er4k"]
 [ext_resource type="PackedScene" uid="uid://dgyuoupsgu1ut" path="res://scenes/player.tscn" id="3_vo50p"]
 [ext_resource type="Texture2D" uid="uid://ctwfnnxwim3v" path="res://assets/art/spritesheet(5).png" id="4_m24c2"]
 [ext_resource type="Texture2D" uid="uid://bog21oa81fixq" path="res://assets/art/spritesheet(4).png" id="6_akxma"]
+[ext_resource type="AudioStream" uid="uid://dxtg3exovjfhb" path="res://assets/sounds/homunculustalk.wav" id="6_uxp3x"]
 [ext_resource type="Texture2D" uid="uid://baenb1kxtm5b5" path="res://assets/art/spritesheet(1).png" id="7_ma2x0"]
 [ext_resource type="Texture2D" uid="uid://csw388t3eady3" path="res://assets/art/PC Computer - Deltarune - Realistic Explosion.png" id="7_qxco5"]
 [ext_resource type="Texture2D" uid="uid://ybi24ctebcfh" path="res://assets/art/spritesheet(6).png" id="7_v5nk0"]
+[ext_resource type="AudioStream" uid="uid://bqwbeww846chr" path="res://assets/sounds/homunculusdiesv2.wav" id="9_a3kme"]
+[ext_resource type="AudioStream" uid="uid://dopdxcwfy7xou" path="res://assets/sounds/medium-explosion-40472.mp3" id="11_rb6vg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t0wmp"]
 atlas = ExtResource("7_ma2x0")
@@ -106,11 +109,12 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 2.0
+"speed": 12.0
 }]
 
 [sub_resource type="Animation" id="Animation_2vjr2"]
 resource_name = "humonculus_crawl"
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -118,14 +122,42 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-794, 392), Vector2(-200, 392)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../humon_talk:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_v3a2n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../humon_talk:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rka0q"]
 _data = {
+"RESET": SubResource("Animation_v3a2n"),
 "humonculus_crawl": SubResource("Animation_2vjr2")
 }
 
@@ -401,12 +433,14 @@ frame = 4
 frame_progress = 0.59232
 
 [node name="Humon_crawl" type="AnimatedSprite2D" parent="."]
-position = Vector2(-794, 392)
+position = Vector2(-200, 392)
 scale = Vector2(0.212776, 0.212776)
 sprite_frames = SubResource("SpriteFrames_51mcn")
 autoplay = "default"
-frame = 2
-frame_progress = 0.52892
+frame_progress = 0.944486
+
+[node name="humon_talk" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_uxp3x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Humon_crawl")
@@ -441,6 +475,13 @@ sprite_frames = SubResource("SpriteFrames_bucw8")
 animation = &"explode"
 frame = 17
 frame_progress = 1.0
+
+[node name="humon_fucking_dies" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_a3kme")
+volume_db = -9.0
+
+[node name="explosion_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_rb6vg")
 
 [connection signal="animation_finished" from="Humon_crawl" to="." method="_on_humon_crawl_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

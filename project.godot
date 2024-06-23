@@ -11,7 +11,11 @@ config_version=5
 [application]
 
 config/name="Palindrome Peril"
+<<<<<<< Updated upstream
 run/main_scene="res://scenes/levels/level_1.tscn"
+=======
+run/main_scene="res://scenes/levels/level_3.tscn"
+>>>>>>> Stashed changes
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 

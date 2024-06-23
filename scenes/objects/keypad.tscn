@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ct3sls5trfbsq"]
+[gd_scene load_steps=8 format=3 uid="uid://ct3sls5trfbsq"]
 
 [ext_resource type="Script" path="res://scripts/keypad.gd" id="1_umcx6"]
 [ext_resource type="Texture2D" uid="uid://bkvaiax7slyei" path="res://assets/art/GJ_placeholder_keypad_button_01.png" id="2_8o7k0"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://mshv4o72biio" path="res://assets/Font/ChakraPetch-MediumItalic.ttf" id="5_axvmy"]
 [ext_resource type="FontFile" uid="uid://y6ht53e6m174" path="res://assets/Font/ChakraPetch-SemiBoldItalic.ttf" id="6_d0cgi"]
 [ext_resource type="FontFile" uid="uid://ch2dudecawva1" path="res://assets/Font/ChakraPetch-Medium.ttf" id="7_86mmp"]
+[ext_resource type="AudioStream" uid="uid://cpre416w34im1" path="res://assets/sounds/opening-metal-door-199581.mp3" id="7_w4tl8"]
 
 [node name="Keypad" type="Control"]
 layout_mode = 3
@@ -66,6 +67,10 @@ offset_bottom = -194.0
 theme_override_fonts/font = ExtResource("7_86mmp")
 theme_override_font_sizes/font_size = 32
 text = "Enter Keycode:"
+
+[node name="doors_unlocked" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_w4tl8")
+volume_db = -5.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="popup_panel/EnterButton" to="." method="_on_enter_button_pressed"]

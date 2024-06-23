@@ -124,12 +124,13 @@ scale = Vector2(0.538429, 0.538429)
 sprite_frames = SubResource("SpriteFrames_dk600")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 z_index = 20
 offset_left = -1609.0
 offset_top = -878.0
 offset_right = 1642.0
 offset_bottom = 1038.0
-color = Color(0.219608, 0.176471, 0.243137, 0)
+color = Color(0.219608, 0.176471, 0.243137, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

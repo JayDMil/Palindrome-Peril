@@ -4,6 +4,7 @@ var popup_hidden = true
 
 @onready var popup = $popup_panel
 @onready var yesno_label = $popup_panel/YesNo_label
+@onready var doors_unlocked = $doors_unlocked
 @onready var next_levels = [
 	get_node("/root/level_1/Level_Basics/Next_Level"),
 	get_node("/root/level_1/Level_Basics/Next_Level2"),
@@ -25,6 +26,7 @@ func _process(delta):
 func _on_enter_button_pressed():
 	if $popup_panel/Keycode.text == "3746":
 		yesno_label.text = "Password Correct! Unlocking door..."
+		doors_unlocked.play()
 		for next_level in next_levels:
 			if next_level != null:
 				next_level.level_beat()
