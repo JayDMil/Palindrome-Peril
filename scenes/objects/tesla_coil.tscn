@@ -1,22 +1,22 @@
 [gd_scene load_steps=8 format=3 uid="uid://ctm8w6rqlukfh"]
 
-[ext_resource type="Texture2D" uid="uid://bphy3mgb7ma11" path="res://assets/art/tesla.png" id="1_e2suu"]
 [ext_resource type="Script" path="res://scripts/tesla_coil.gd" id="1_ypglk"]
-[ext_resource type="Texture2D" uid="uid://cmmucrna1wvf6" path="res://assets/art/tesladamage.png" id="2_hry47"]
+[ext_resource type="Texture2D" uid="uid://bu5yvmjfchdht" path="res://assets/art/props/tesla(2).png" id="2_ojeqj"]
+[ext_resource type="Texture2D" uid="uid://bxxp8ktt6wleb" path="res://assets/art/props/tesladamaged(1).png" id="3_oywtu"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_upe0d"]
-atlas = ExtResource("1_e2suu")
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1tmf"]
+atlas = ExtResource("2_ojeqj")
 region = Rect2(0, 0, 645, 1200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3a6fs"]
-atlas = ExtResource("2_hry47")
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t15f"]
+atlas = ExtResource("3_oywtu")
 region = Rect2(0, 0, 645, 1200)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mcpee"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_upe0d")
+"texture": SubResource("AtlasTexture_f1tmf")
 }],
 "loop": true,
 "name": &"default",
@@ -24,7 +24,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3a6fs")
+"texture": SubResource("AtlasTexture_6t15f")
 }],
 "loop": true,
 "name": &"destroyed",

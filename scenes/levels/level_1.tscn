@@ -1,14 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://4if27ivaw5k6"]
+[gd_scene load_steps=12 format=3 uid="uid://4if27ivaw5k6"]
 
 [ext_resource type="PackedScene" uid="uid://vvvewgaanhnq" path="res://scenes/level_basics.tscn" id="1_3tb64"]
 [ext_resource type="PackedScene" uid="uid://dgyuoupsgu1ut" path="res://scenes/player.tscn" id="1_cuy7i"]
 [ext_resource type="PackedScene" uid="uid://dutjmmi4jqeta" path="res://scenes/objects/sticky_note.tscn" id="3_m0qaf"]
 [ext_resource type="FontFile" uid="uid://ch2dudecawva1" path="res://assets/Font/ChakraPetch-Medium.ttf" id="3_yjet1"]
 [ext_resource type="PackedScene" uid="uid://ct3sls5trfbsq" path="res://scenes/objects/keypad.tscn" id="5_8frci"]
-[ext_resource type="Texture2D" uid="uid://bl4rqkdfmn1ty" path="res://assets/art/book2.png" id="6_ago4m"]
-[ext_resource type="Texture2D" uid="uid://xwj6l5los2v7" path="res://assets/art/book4.png" id="7_ybdwc"]
-[ext_resource type="Texture2D" uid="uid://cqgnpckfsgf3y" path="res://assets/art/book1.png" id="8_jjmob"]
-[ext_resource type="Texture2D" uid="uid://c3v834sq40le3" path="res://assets/art/book3.png" id="9_bry2r"]
+[ext_resource type="Texture2D" uid="uid://bjtsv60mhsxki" path="res://assets/art/props/bookblue.png" id="6_hfv6x"]
+[ext_resource type="Texture2D" uid="uid://wniwaiha0su4" path="res://assets/art/props/bookred.png" id="7_b3w2d"]
+[ext_resource type="Texture2D" uid="uid://bjbuaa2sykix2" path="res://assets/art/props/booksyellow.png" id="8_o58ig"]
+[ext_resource type="Texture2D" uid="uid://w5l7egd0jqst" path="res://assets/art/props/bookscie.png" id="9_uuicd"]
+[ext_resource type="Texture2D" uid="uid://cgqdy2x18g4nc" path="res://assets/art/props/bookorange.png" id="10_coquq"]
+[ext_resource type="Texture2D" uid="uid://bol8cf8cpldgu" path="res://assets/art/props/bookpurple.png" id="11_drgmq"]
 
 [node name="level_1" type="Node2D"]
 
@@ -27,6 +29,7 @@ offset_bottom = -103.0
 scale = Vector2(0.690835, 0.690835)
 
 [node name="Level Text" type="Label" parent="."]
+z_index = 20
 texture_repeat = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -49,61 +52,141 @@ offset_right = -297.0
 offset_bottom = -115.0
 scale = Vector2(0.749643, 0.749643)
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Books" type="Node2D" parent="."]
 position = Vector2(114, -172)
 scale = Vector2(0.121064, 0.125239)
 
-[node name="RedBook" type="Sprite2D" parent="Node2D"]
-texture = ExtResource("6_ago4m")
+[node name="BlueBook" type="Sprite2D" parent="Books"]
+position = Vector2(66.0807, 95.8167)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("6_hfv6x")
 
-[node name="RedBook4" type="Sprite2D" parent="Node2D"]
-position = Vector2(908.607, 2786.67)
-texture = ExtResource("6_ago4m")
+[node name="BlueBook2" type="Sprite2D" parent="Books"]
+position = Vector2(2180.67, 95.8167)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("6_hfv6x")
 
-[node name="RedBook3" type="Sprite2D" parent="Node2D"]
-position = Vector2(-305.623, 0)
-texture = ExtResource("6_ago4m")
+[node name="BlueBook3" type="Sprite2D" parent="Books"]
+position = Vector2(1965.9, 95.8167)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("6_hfv6x")
 
-[node name="RedBook2" type="Sprite2D" parent="Node2D"]
-position = Vector2(2048.5, 1405.31)
-texture = ExtResource("6_ago4m")
+[node name="BlueBook4" type="Sprite2D" parent="Books"]
+position = Vector2(1131.63, 1525.08)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("6_hfv6x")
 
-[node name="YellowBook" type="Sprite2D" parent="Node2D"]
-position = Vector2(1040.77, 1453.22)
-scale = Vector2(0.999987, 0.966654)
-texture = ExtResource("7_ybdwc")
+[node name="BlueBook5" type="Sprite2D" parent="Books"]
+position = Vector2(1015.99, 2874.5)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("6_hfv6x")
 
-[node name="YellowBook2" type="Sprite2D" parent="Node2D"]
-position = Vector2(1808.95, 2858.53)
-scale = Vector2(0.999987, 0.966654)
-texture = ExtResource("7_ybdwc")
+[node name="RedBook" type="Sprite2D" parent="Books"]
+position = Vector2(437.785, 95.8167)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("7_b3w2d")
 
-[node name="GreenBook" type="Sprite2D" parent="Node2D"]
-position = Vector2(561.685, 1493.15)
-scale = Vector2(0.879751, 0.850426)
-texture = ExtResource("8_jjmob")
+[node name="RedBook2" type="Sprite2D" parent="Books"]
+position = Vector2(2131.1, 2882.49)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("7_b3w2d")
 
-[node name="GreenBook2" type="Sprite2D" parent="Node2D"]
-position = Vector2(355.183, 47.9084)
-scale = Vector2(0.879751, 0.850426)
-texture = ExtResource("8_jjmob")
+[node name="YellowBook" type="Sprite2D" parent="Books"]
+position = Vector2(2131.1, 1533.07)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("8_o58ig")
 
-[node name="GreenBook3" type="Sprite2D" parent="Node2D"]
-position = Vector2(2073.28, 63.8781)
-scale = Vector2(0.879751, 0.850426)
-texture = ExtResource("8_jjmob")
+[node name="YellowBook3" type="Sprite2D" parent="Books"]
+position = Vector2(578.206, 1533.07)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("8_o58ig")
 
-[node name="BlueBook" type="Sprite2D" parent="Node2D"]
-position = Vector2(1652.01, 1421.28)
-scale = Vector2(1.0162, 0.982331)
-texture = ExtResource("9_bry2r")
+[node name="YellowBook7" type="Sprite2D" parent="Books"]
+position = Vector2(1280.31, 1533.07)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("8_o58ig")
 
-[node name="BlueBook3" type="Sprite2D" parent="Node2D"]
-position = Vector2(1263.79, 2802.64)
-scale = Vector2(1.0162, 0.982331)
-texture = ExtResource("9_bry2r")
+[node name="YellowBook4" type="Sprite2D" parent="Books"]
+position = Vector2(363.444, 1533.07)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("8_o58ig")
 
-[node name="BlueBook2" type="Sprite2D" parent="Node2D"]
-position = Vector2(1685.05, 15.9695)
-scale = Vector2(1.0162, 0.982331)
-texture = ExtResource("9_bry2r")
+[node name="YellowBook5" type="Sprite2D" parent="Books"]
+position = Vector2(-198.242, 95.8168)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("8_o58ig")
+
+[node name="YellowBook6" type="Sprite2D" parent="Books"]
+position = Vector2(1197.71, 2882.49)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("8_o58ig")
+
+[node name="YellowBook2" type="Sprite2D" parent="Books"]
+position = Vector2(2131.1, 1533.07)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("8_o58ig")
+
+[node name="GreenBook" type="Sprite2D" parent="Books"]
+position = Vector2(867.31, 1533.07)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("9_uuicd")
+
+[node name="GreenBook2" type="Sprite2D" parent="Books"]
+position = Vector2(1908.08, 1533.07)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("9_uuicd")
+
+[node name="GreenBook3" type="Sprite2D" parent="Books"]
+position = Vector2(718.628, 95.8165)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("9_uuicd")
+
+[node name="GreenBook4" type="Sprite2D" parent="Books"]
+position = Vector2(1718.1, 2866.52)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("9_uuicd")
+
+[node name="OtherBook" type="Sprite2D" parent="Books"]
+position = Vector2(1305.09, 79.847)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("10_coquq")
+
+[node name="OtherBook2" type="Sprite2D" parent="Books"]
+position = Vector2(-759.929, 79.847)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("11_drgmq")
+
+[node name="OtherBook3" type="Sprite2D" parent="Books"]
+position = Vector2(1734.62, 87.832)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("11_drgmq")
+
+[node name="OtherBook4" type="Sprite2D" parent="Books"]
+position = Vector2(974.691, 87.832)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("11_drgmq")
+
+[node name="OtherBook5" type="Sprite2D" parent="Books"]
+position = Vector2(198.242, 1533.07)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("11_drgmq")
+
+[node name="OtherBook6" type="Sprite2D" parent="Books"]
+position = Vector2(1470.3, 2874.5)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("11_drgmq")
+
+[node name="OtherBook7" type="Sprite2D" parent="Books"]
+position = Vector2(1635.5, 1533.07)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("10_coquq")
+
+[node name="OtherBook8" type="Sprite2D" parent="Books"]
+position = Vector2(-74.3411, 1533.07)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("10_coquq")
+
+[node name="OtherBook9" type="Sprite2D" parent="Books"]
+position = Vector2(-446.045, 71.8626)
+scale = Vector2(1.89982, 1.89982)
+texture = ExtResource("10_coquq")
