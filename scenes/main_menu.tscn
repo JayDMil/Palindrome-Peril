@@ -1,41 +1,74 @@
-[gd_scene load_steps=3 format=3 uid="uid://dtykx5gx4hccj"]
+[gd_scene load_steps=5 format=3 uid="uid://dtykx5gx4hccj"]
 
 [ext_resource type="FontFile" uid="uid://ch2dudecawva1" path="res://assets/Font/ChakraPetch-Medium.ttf" id="1_66m2k"]
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_h3bsj"]
+[ext_resource type="Texture2D" uid="uid://c0ne1p23yyskc" path="res://assets/art/fuck.png" id="2_hw3jk"]
+[ext_resource type="Texture2D" uid="uid://d0lmi07dgsdmy" path="res://assets/art/GJ_DD_TitleScreen.png" id="4_in3gd"]
 
 [node name="Main Menu" type="Node2D"]
 script = ExtResource("1_h3bsj")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(87, 38)
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -965.0
+offset_top = -532.0
+offset_right = 1207.0
+offset_bottom = 639.0
+color = Color(0.0117647, 0.0862745, 0.0588235, 1)
+
+[node name="Vil" type="Sprite2D" parent="."]
+position = Vector2(85, 48)
+texture = ExtResource("2_hw3jk")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -137.0
+offset_top = -303.0
+offset_right = -97.0
+offset_bottom = -263.0
+scale = Vector2(1.59032, 1.59032)
 
-[node name="MarginContainer" type="MarginContainer" parent="Control"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+[node name="StartButton" type="Button" parent="Control"]
 layout_mode = 2
-
-[node name="StartButton" type="Button" parent="Control/MarginContainer/VBoxContainer"]
-layout_mode = 2
+offset_left = 355.274
+offset_top = 133.935
+offset_right = 532.274
+offset_bottom = 173.935
 size_flags_vertical = 4
 theme_override_fonts/font = ExtResource("1_66m2k")
 theme_override_font_sizes/font_size = 24
 text = "Start Game"
 icon_alignment = 1
 
-[node name="QuitButton" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+[node name="QuitButton" type="Button" parent="Control"]
 layout_mode = 2
+offset_left = 355.274
+offset_top = 191.785
+offset_right = 532.274
+offset_bottom = 231.785
 theme_override_fonts/font = ExtResource("1_66m2k")
 theme_override_font_sizes/font_size = 24
 text = "Exit to Desktop"
 
-[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[node name="Label" type="Label" parent="Control"]
+offset_left = -420.669
+offset_top = 161.602
+offset_right = -72.6693
+offset_bottom = 248.602
+theme_override_fonts/font = ExtResource("1_66m2k")
+theme_override_font_sizes/font_size = 20
+text = "WSAD to Move
+Click on Objects to Interact with them
+Q or P to Close Popups
+"
+horizontal_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(87, 38)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-10, -269)
+texture = ExtResource("4_in3gd")
+
+[connection signal="pressed" from="Control/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Control/QuitButton" to="." method="_on_quit_button_pressed"]

@@ -29,24 +29,24 @@ position = Vector2(0, -18)
 shape = SubResource("WorldBoundaryShape2D_cp1qh")
 
 [node name="Next_Level" parent="." instance=ExtResource("3_pmbej")]
-position = Vector2(-700, -2)
+position = Vector2(-787, -2)
 
 [node name="Next_Level2" parent="." instance=ExtResource("3_pmbej")]
-position = Vector2(700, -5)
+position = Vector2(777, -5)
 rotation = 3.14159
 scale = Vector2(0.998486, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(-950, -2)
+position = Vector2(-1102, -2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(126.5, -12.5)
 shape = SubResource("RectangleShape2D_j22vi")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(700, -2)
+position = Vector2(836, -2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(126.5, -12.5)

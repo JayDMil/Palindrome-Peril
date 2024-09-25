@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://de4akngfotcs6"]
+[gd_scene load_steps=65 format=3 uid="uid://de4akngfotcs6"]
 
 [ext_resource type="Script" path="res://scripts/humonculus_cutscene.gd" id="1_8cah7"]
 [ext_resource type="PackedScene" uid="uid://vvvewgaanhnq" path="res://scenes/level_basics.tscn" id="2_8er4k"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ybi24ctebcfh" path="res://assets/art/spritesheet(6).png" id="7_v5nk0"]
 [ext_resource type="AudioStream" uid="uid://bqwbeww846chr" path="res://assets/sounds/homunculusdiesv2.wav" id="9_a3kme"]
 [ext_resource type="AudioStream" uid="uid://dopdxcwfy7xou" path="res://assets/sounds/medium-explosion-40472.mp3" id="11_rb6vg"]
+[ext_resource type="Texture2D" uid="uid://cayqb2874ldqt" path="res://assets/art/GJ_placeholder_door_02.png" id="12_rii22"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t0wmp"]
 atlas = ExtResource("7_ma2x0")
@@ -415,7 +416,6 @@ script = ExtResource("1_8cah7")
 [node name="Level Basics" parent="." instance=ExtResource("2_8er4k")]
 
 [node name="ColorRect2" type="ColorRect" parent="Level Basics"]
-z_index = 1
 offset_left = -1494.0
 offset_top = -572.0
 offset_right = -740.0
@@ -433,7 +433,7 @@ frame = 4
 frame_progress = 0.59232
 
 [node name="Humon_crawl" type="AnimatedSprite2D" parent="."]
-position = Vector2(-200, 392)
+position = Vector2(-378.2, 392)
 scale = Vector2(0.212776, 0.212776)
 sprite_frames = SubResource("SpriteFrames_51mcn")
 autoplay = "default"
@@ -482,6 +482,12 @@ volume_db = -9.0
 
 [node name="explosion_sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_rb6vg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.470588, 0.235294, 0.486275, 1)
+z_index = 1
+position = Vector2(-789, -1)
+texture = ExtResource("12_rii22")
 
 [connection signal="animation_finished" from="Humon_crawl" to="." method="_on_humon_crawl_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

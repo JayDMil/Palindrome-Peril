@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2nggoaojbhnb"]
+
+[ext_resource type="AudioStream" uid="uid://c3fcfj32v14nv" path="res://assets/sounds/bgm(1).mp3" id="1_wgund"]
+
+[node name="Overworldmusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_wgund")
+volume_db = -15.0
+autoplay = true
